@@ -2,6 +2,7 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import RootLayout from './pages/Root';
 import FixedProducts from './pages/FixedProducts';
+import { HeaderContextProvider } from './header-context';
 
 const router = createBrowserRouter([
     {
@@ -11,7 +12,11 @@ const router = createBrowserRouter([
     },
 ]);
 function App() {
-    return <RouterProvider router={router} />;
+    return (
+        <HeaderContextProvider>
+            <RouterProvider router={router} />
+        </HeaderContextProvider>
+    );
 }
 
 export default App;
