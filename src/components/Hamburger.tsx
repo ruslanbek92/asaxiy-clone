@@ -9,7 +9,7 @@ function Hamburger() {
         hamburger.setIsHamburgerOpen((prev) => !prev);
     };
     return (
-        <button className="xl:hidden" onClick={handleMenuClick} type="button">
+        <button className="md:hidden" onClick={handleMenuClick} type="button">
             {!hamburger.isHamburgerOpen && (
                 <GiHamburgerMenu className="w-6 h-auto" />
             )}
