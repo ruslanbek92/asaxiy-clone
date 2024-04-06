@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import SideNavbar from '../components/SideNavbar';
 import { HeaderContext } from '../header-context';
 import Categories from '../components/Categories';
+import MainSection from '../components/MainSection';
 
 function RootLayout() {
     const { category } = useContext(HeaderContext);
@@ -12,14 +13,11 @@ function RootLayout() {
     return (
         <>
             <Header />
-            {!category.isCatOpen && (
-                <>
-                    {' '}
-                    <Outlet />
-                    <Footer />
-                </>
-            )}
-            {category.isCatOpen && <Categories />}
+            <MainSection>
+                <Outlet />
+                {category.isCatOpen && <Categories />}
+                <Footer />
+            </MainSection>
             <SideNavbar />
         </>
     );

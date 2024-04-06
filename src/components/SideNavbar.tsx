@@ -8,7 +8,7 @@ function SideNavbar() {
     const positionClass = !hamburger.isHamburgerOpen ? '-left-72' : '';
     return (
         <nav
-            className={`position: absolute top-0 ${positionClass}  w-72 border-red-900 border-2 h-screen flex flex-col gap-4 justify-center items-center text-sky-400 bg-white`}
+            className={`position: absolute top-0 ${positionClass} z-30 w-72 border-red-900 border-2 h-screen flex flex-col gap-4 justify-center items-center text-sky-400 bg-white`}
         >
             <ul className="flex flex-col gap-4 ">
                 <li className="text-center">

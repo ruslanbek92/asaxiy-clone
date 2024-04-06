@@ -4,3 +4,21 @@
 body {
   background-color: aliceblue;
 }
+/* styles.css */
+/* Custom scrollbar styles for WebKit-based browsers (Chrome, Safari) */
+
+/* Track */
+::-webkit-scrollbar {
+  width: 8px; /* Set width of the scrollbar */
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #95a6ad; /* Set color of the scrollbar thumb */
+  border-radius: 4px; /* Set border radius of the scrollbar thumb */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set color of the scrollbar track */
+}
