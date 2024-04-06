@@ -1,88 +1,116 @@
+import books from '../assets/category-images/books.jpeg';
+import console from '../assets/category-images/console.png';
+import furniture from '../assets/category-images/furniture.png';
+import pan from '../assets/category-images/pan.jpeg';
+import pc from '../assets/category-images/pc.jpeg';
+import smartphone from '../assets/category-images/smartphone.png';
+import sports from '../assets/category-images/sports.png';
+import tires from '../assets/category-images/tires.png';
+import tv from '../assets/category-images/tv.png';
+import machine from '../assets/category-images/washing-machine.png';
+
 const CATEGORIES = [
     {
         name: 'Books',
         link: 'product/books',
-        image: '/book.png',
+        icon: '/book.png',
+        image: books,
     },
     {
         name: 'Mobile and gadgets',
         link: 'product/mobile-gadgets',
-        image: '/tablet.png',
+        icon: '/tablet.png',
+        image: smartphone,
     },
     {
         name: 'Household appliances',
         link: 'product/appliances',
-        image: '/appliances.png',
+        icon: '/appliances.png',
+        image: machine,
     },
     {
         name: 'Climate controllers',
         link: 'product/climate-controllers',
-        image: '/air-conditioner.png',
+        icon: '/air-conditioner.png',
+        image: machine,
     },
     {
         name: 'Computers',
         link: 'product/computers',
-        image: '/laptop.png',
+        icon: '/laptop.png',
+        image: pc,
     },
     {
         name: 'Sports and leisure',
         link: 'product/sports-leisure',
-        image: '/sports.png',
+        icon: '/sports.png',
+        image: sports,
     },
     {
         name: 'Home and Office',
         link: 'product/home-office',
-        image: '/torches.png',
+        icon: '/torches.png',
+        image: pc,
     },
     {
         name: 'TV, video and audio',
         link: 'product/htv-video-audio',
-        image: '/television.png',
+        icon: '/television.png',
+        image: tv,
     },
     {
         name: 'For gamers',
         link: 'product/for-gamers',
-        image: '/console.png',
+        icon: '/console.png',
+        image: console,
     },
     {
         name: 'Furniture',
         link: 'product/furniture',
-        image: '/armchair.png',
+        icon: '/armchair.png',
+        image: furniture,
     },
     {
         name: 'Dishes',
         link: 'product/dishes',
-        image: '/dish.png',
+        icon: '/dish.png',
+        image: pan,
     },
     {
         name: 'Beauty and health',
         link: 'product/beauty-and-health',
-        image: '/skin-care.png',
+        icon: '/skin-care.png',
+        image: pan,
     },
     {
         name: 'For kids',
         link: 'product/for-kids',
-        image: '/toys.png',
+        icon: '/toys.png',
+        image: books,
     },
     {
         name: 'Clothes,shoes and accessoires',
         link: 'product/clothes-shoes-accessoires',
-        image: '/toys.png',
+        icon: '/toys.png',
+        image: books,
     },
     {
         name: 'Toys,gifts and accessoires',
         link: 'product/toys-gifts-accessoires',
-        image: '/toys.png',
+        icon: '/toys.png',
+        image: books,
     },
     {
         name: 'Vehicle products',
         link: 'product/vehicle-products',
-        image: '/toys.png',
+        icon: '/toys.png',
+        image: tires,
     },
     {
         name: 'stationery products',
         link: 'product/stationery-products',
-        image: '/toys.png',
+        icon: '/toys.png',
+        image: books,
     },
 ];
 
