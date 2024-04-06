@@ -18,7 +18,7 @@ function Header() {
         category.setIsCatOpen((prev) => !prev);
     };
     return (
-        <header>
+        <header className="position: fixed z-10 top-0 left-0 right-0">
             <div className="flex flex-col md:flex-row gap-6 items-center justify-around py-4 bg-white">
                 <h1>
                     <Link to="/">

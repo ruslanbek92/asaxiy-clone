@@ -4,22 +4,22 @@ function SubHeader() {
     return (
         <nav className="border-y-2 border-solid  bg-white">
             <ul className="flex flex-col gap-2 md:flex-row md:gap-0 justify-between items-center p-5 font-bold">
-                <li>
+                <li className="hover:text-sky-400">
                     <Link to="/">Telefon va gadjetlar</Link>
                 </li>
-                <li>
+                <li className="hover:text-sky-400">
                     <Link to="/">Maishiy texnika</Link>
                 </li>
-                <li>
+                <li className="hover:text-sky-400">
                     <Link to="/">Kitoblar</Link>
                 </li>
-                <li>
+                <li className="hover:text-sky-400">
                     <Link to="/">Televizorlar</Link>
                 </li>
-                <li>
+                <li className="hover:text-sky-400">
                     <Link to="/">Yangi kelganlar</Link>
                 </li>
-                <li>
+                <li className="hover:text-sky-400">
                     <Link to="/">Noutbuklar</Link>
                 </li>
             </ul>
