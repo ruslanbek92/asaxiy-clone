@@ -28,7 +28,7 @@ function CategoriesSideBar({ onMouseEnter, onMouseLeave }) {
                         >
                             <div className="flex items-center gap-3">
                                 <img
-                                    src={item.image}
+                                    src={item.icon}
                                     alt=""
                                     className="w-1/12 "
                                 />
