@@ -20,6 +20,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["to"]
+    }],
     "react/prop-types":"warn",
     "react/react-in-jsx-scope": "off",
   "react/jsx-uses-react": "off",

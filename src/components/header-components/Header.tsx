@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import Search from './Search';
 import NavBar from './NavBar';
-import { HeaderContext } from '../header-context';
-import uzbek from '../assets/flag-uzbek.svg.png';
-import logo from '../assets/asaxiy-logo.svg';
+import { HeaderContext } from '../../header-context';
+import uzbek from '../../assets/flag-uzbek.svg.png';
+import logo from '../../assets/asaxiy-logo.svg';
 import Hamburger from './Hamburger';
 import SubHeader from './SubHeader';
 
