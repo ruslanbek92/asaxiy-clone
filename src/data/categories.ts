@@ -11,7 +11,7 @@ import machine from '../assets/category-images/washing-machine.png';
 
 const CATEGORIES = [
     {
-        name: 'Books',
+        name: 'books',
         link: 'product/books',
         icon: '/book.png',
         image: books,

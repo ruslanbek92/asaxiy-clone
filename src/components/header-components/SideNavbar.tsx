@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { HeaderContext } from '../header-context';
+import { HeaderContext } from '../../header-context';
 import Hamburger from './Hamburger';
 
 function SideNavbar() {

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CategoriesSideBar from './CategoriesSideBar';
-import CATEGORY_DETAILS from '../data/category-details';
+import CATEGORY_DETAILS from '../../data/category-details';
 
 function Categories() {
-    const [content, setContent] = useState('Books');
+    const [content, setContent] = useState('books');
     const handleMouseEnter = (title) => {
         setContent(title);
     };

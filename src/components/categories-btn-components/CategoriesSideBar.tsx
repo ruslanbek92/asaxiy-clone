@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import CATEGORIES from '../data/categories';
+import CATEGORIES from '../../data/categories';
 
 function CategoriesSideBar({ onMouseEnter, onMouseLeave }) {
     function handleMouseEnter(name) {

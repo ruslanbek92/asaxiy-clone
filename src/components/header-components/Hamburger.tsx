@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
-import { HeaderContext } from '../header-context';
+import { HeaderContext } from '../../header-context';
 
 function Hamburger() {
     const { hamburger } = useContext(HeaderContext);

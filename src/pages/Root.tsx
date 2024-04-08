@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router';
 import { useContext } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import SideNavbar from '../components/SideNavbar';
+import Header from '../components/header-components/Header';
+import Footer from '../components/footer-components/Footer';
+import SideNavbar from '../components/header-components/SideNavbar';
 import { HeaderContext } from '../header-context';
-import Categories from '../components/Categories';
+import Categories from '../components/categories-btn-components/Categories';
 import MainSection from '../components/MainSection';
 
 function RootLayout() {

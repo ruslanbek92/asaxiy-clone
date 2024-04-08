@@ -1,5 +1,5 @@
 const CATEGORY_DETAILS = {
-    Books: [
+    books: [
         {
             name: 'asaxiy books',
             link: '/product/books/asaxiy-books',
