@@ -1,116 +1,105 @@
-import books from '../assets/category-images/books.jpeg';
-import console from '../assets/category-images/console.png';
-import furniture from '../assets/category-images/furniture.png';
-import pan from '../assets/category-images/pan.jpeg';
-import pc from '../assets/category-images/pc.jpeg';
-import smartphone from '../assets/category-images/smartphone.png';
-import sports from '../assets/category-images/sports.png';
-import tires from '../assets/category-images/tires.png';
-import tv from '../assets/category-images/tv.png';
-import machine from '../assets/category-images/washing-machine.png';
-
 const CATEGORIES = [
     {
         name: 'books',
         link: 'product/books',
-        icon: '/book.png',
-        image: books,
+        icon: 'category-icons/book.png',
+        image: 'category-images/books.jpeg',
     },
     {
         name: 'Mobile and gadgets',
         link: 'product/mobile-gadgets',
-        icon: '/tablet.png',
-        image: smartphone,
+        icon: 'category-icons/tablet.png',
+        image: 'category-images/smartphone.png',
     },
     {
         name: 'Household appliances',
         link: 'product/appliances',
-        icon: '/appliances.png',
-        image: machine,
+        icon: 'category-icons/appliances.png',
+        image: 'category-images/washing-machine.png',
     },
     {
         name: 'Climate controllers',
         link: 'product/climate-controllers',
-        icon: '/air-conditioner.png',
-        image: machine,
+        icon: 'category-icons/air-conditioner.png',
+        image: 'category-images/washing-machine.png',
     },
     {
         name: 'Computers',
         link: 'product/computers',
-        icon: '/laptop.png',
-        image: pc,
+        icon: 'category-icons/laptop.png',
+        image: 'category-images/pan.jpeg',
     },
     {
         name: 'Sports and leisure',
         link: 'product/sports-leisure',
-        icon: '/sports.png',
-        image: sports,
+        icon: 'category-icons/sports.png',
+        image: 'category-images/sports.png',
     },
     {
         name: 'Home and Office',
         link: 'product/home-office',
-        icon: '/torches.png',
-        image: pc,
+        icon: 'category-icons/torches.png',
+        image: 'category-images/pc.jpeg',
     },
     {
         name: 'TV, video and audio',
         link: 'product/htv-video-audio',
-        icon: '/television.png',
-        image: tv,
+        icon: 'category-icons/television.png',
+        image: 'category-images/tv.png',
     },
     {
         name: 'For gamers',
         link: 'product/for-gamers',
-        icon: '/console.png',
-        image: console,
+        icon: 'category-icons/console.png',
+        image: 'category-images/console.png',
     },
     {
         name: 'Furniture',
         link: 'product/furniture',
-        icon: '/armchair.png',
-        image: furniture,
+        icon: 'category-icons/armchair.png',
+        image: 'category-images/furniture.png',
     },
     {
         name: 'Dishes',
         link: 'product/dishes',
-        icon: '/dish.png',
-        image: pan,
+        icon: 'category-icons/dish.png',
+        image: 'category-images/pan.jpeg',
     },
     {
         name: 'Beauty and health',
         link: 'product/beauty-and-health',
-        icon: '/skin-care.png',
-        image: pan,
+        icon: 'category-icons/skin-care.png',
+        image: 'category-images/pan.jpeg',
     },
     {
         name: 'For kids',
         link: 'product/for-kids',
-        icon: '/toys.png',
-        image: books,
+        icon: 'category-icons/toys.png',
+        image: 'category-images/books.jpeg',
     },
     {
         name: 'Clothes,shoes and accessoires',
         link: 'product/clothes-shoes-accessoires',
-        icon: '/toys.png',
-        image: books,
+        icon: 'category-icons/toys.png',
+        image: 'category-images/books.jpeg',
     },
     {
         name: 'Toys,gifts and accessoires',
         link: 'product/toys-gifts-accessoires',
-        icon: '/toys.png',
-        image: books,
+        icon: 'category-icons/toys.png',
+        image: 'category-images/books.jpeg',
     },
     {
         name: 'Vehicle products',
         link: 'product/vehicle-products',
-        icon: '/toys.png',
-        image: tires,
+        icon: 'category-icons/toys.png',
+        image: 'category-images/tires.png',
     },
     {
         name: 'stationery products',
         link: 'product/stationery-products',
-        icon: '/toys.png',
-        image: books,
+        icon: 'category-icons/toys.png',
+        image: 'category-images/books.jpeg',
     },
 ];
 

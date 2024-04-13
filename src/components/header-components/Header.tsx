@@ -40,7 +40,7 @@ function Header() {
                         <GiHamburgerMenu className="w-6 h-auto" />
                     )}
                     {category.isCatOpen && <IoClose className="w-6 h-auto" />}
-                    Category
+                    Catetories
                 </button>
                 <Search />
                 <NavBar />
