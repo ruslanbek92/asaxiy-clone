@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import CATEGORY_DETAILS from '../data/category-details';
 
 function Category({ image, category }) {
+    console.log('category image', image);
     return (
         <div className="flex justify-between items-center m-4 p-4 rounded bg-white">
             <div className="flex justify-between gap-2 flex-wrap lg:basis-6/12 basis-full">
