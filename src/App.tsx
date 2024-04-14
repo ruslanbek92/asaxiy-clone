@@ -6,7 +6,8 @@ import FixedProducts from './pages/FixedProducts';
 import { HeaderContextProvider } from './header-context';
 import Products from './pages/Products';
 import ProductCategory from './pages/ProductCategory';
-import addCategories, { addCategoryDetails } from './util';
+import addCategories, { addCategoryDetails } from './util/category';
+import addProducts from './util/products';
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,7 @@ function App() {
     useEffect(() => {
         addCategories();
         addCategoryDetails();
+        addProducts();
     }, []);
 
     const queryClient = new QueryClient();

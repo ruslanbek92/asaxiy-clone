@@ -9,9 +9,9 @@ import {
     setDoc,
     where,
 } from 'firebase/firestore';
-import { storage, firestore } from './firebase';
-import CATEGORY_DETAILS from './data/category-details';
-import CATEGORIES from './data/categories';
+import { storage, firestore } from '../firebase';
+import CATEGORY_DETAILS from '../data/category-details';
+import CATEGORIES from '../data/categories';
 
 export default function addCategories() {
     CATEGORIES.forEach(async (category) => {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { getCategories } from '../../util';
+import { getCategories } from '../../util/category';
 
 function CategoriesSideBar({ onMouseEnter, onMouseLeave }) {
     function handleMouseEnter(name) {
