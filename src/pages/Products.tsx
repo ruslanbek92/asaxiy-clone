@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 import Category from '../components/Category';
-import { getCategories } from '../util';
+import { getCategories } from '../util/category';
 
 function Products() {
     const { data, isPending, isError, error } = useQuery({
@@ -20,7 +21,9 @@ function Products() {
                 {data.map((category) => {
                     return (
                         <li key={category.name}>
-                            <h2 className="font-bold">{category.name}</h2>
+                            <Link to={`/product/${category.name}`}>
+                                <h2 className="font-bold">{category.name}</h2>
+                            </Link>
                             <Category
                                 image={category.image}
                                 category={category}
