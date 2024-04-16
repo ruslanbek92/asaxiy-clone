@@ -8,6 +8,7 @@ import Products from './pages/Products';
 import ProductCategory from './pages/ProductCategory';
 import addCategories, { addCategoryDetails } from './util/category';
 import addProducts from './util/products';
+import ProductDetail from './components/product-components/ProductDetail';
 
 const router = createBrowserRouter([
     {
@@ -16,7 +17,22 @@ const router = createBrowserRouter([
         children: [
             { path: '/', element: <FixedProducts /> },
             { path: '/product', element: <Products /> },
-            { path: '/product/:productCategory', element: <ProductCategory /> },
+            {
+                path: '/product/category/:productCategory',
+                element: <ProductCategory />,
+            },
+            {
+                path: '/product/category/:productCategory/:productSubCategory',
+                element: <ProductCategory />,
+            },
+            {
+                path: '/product/category/:productCategory/:productSubCategory/:thirdLevelCategory',
+                element: <ProductCategory />,
+            },
+            {
+                path: '/product/detail/:productDetail',
+                element: <ProductDetail />,
+            },
         ],
     },
 ]);

@@ -2,104 +2,104 @@ const CATEGORY_DETAILS = {
     books: [
         {
             name: 'asaxiy books',
-            link: '/product/books/asaxiy-books',
+            link: '/product/category/books/asaxiy books',
             subCategories: [],
         },
         {
             name: 'kids books',
-            link: '/product/books/kids-books',
+            link: '/product/category/books/kids books',
             subCategories: [],
         },
         {
             name: 'religious books',
-            link: '/product/books/religious-books',
+            link: '/product/category/books/religious books',
             subCategories: [],
         },
         {
             name: 'for undergraduates',
-            link: '/product/books/for-undergraduates',
+            link: '/product/category/books/for undergraduates',
             subCategories: [],
         },
         {
             name: 'Top 100 bestsellers',
-            link: '/product/books/100-bestsellers',
+            link: '/product/category/books/100 bestsellers',
             subCategories: [],
         },
         {
             name: 'Bestseller set',
-            link: '/product/books/bestsellers',
+            link: '/product/category/books/bestsellers',
             subCategories: [],
         },
         {
-            name: 'Gift sets',
-            link: '/product/books/gift-sets',
+            name: 'gift sets',
+            link: '/product/category/books/gift sets',
             subCategories: [],
         },
         {
-            name: 'IT related',
-            link: '/product/books/it-books',
+            name: 'IT books',
+            link: '/product/category/books/IT books',
             subCategories: [],
         },
         {
             name: 'Organizers',
-            link: '/product/books/organizers',
+            link: '/product/category/books/Organizers',
             subCategories: [],
         },
         {
             name: 'Physchology and personal development',
-            link: '/product/books/personal-development',
+            link: '/product/category/books/Physchology and personal development',
             subCategories: [],
         },
         {
             name: 'Books in russian',
-            link: '/product/books/russian-books',
+            link: '/product/category/books/Books in russian',
             subCategories: [],
         },
         {
             name: 'Detective and Fantasy',
-            link: '/product/books/detective-and-fantasy',
+            link: '/product/category/books/Detective and Fantasy',
             subCategories: [],
         },
         {
             name: 'Turkish literature',
-            link: '/product/books/turkish-literature',
+            link: '/product/category/books/Turkish literature',
             subCategories: [],
         },
         {
             name: 'Bussiness literature',
-            link: '/product/books/bussiness-literature',
+            link: '/product/category/books/Bussiness literature',
             subCategories: [],
         },
         {
             name: 'Politics',
-            link: '/product/books/politics',
+            link: '/product/category/books/Politics',
             subCategories: [],
         },
         {
             name: 'Dictionaries',
-            link: '/product/books/dictionaries',
+            link: '/product/category/books/Dictionaries',
             subCategories: [],
         },
         {
             name: 'Science and textbooks',
-            link: '/product/books/science-and-textbooks',
+            link: '/product/category/books/Science and textbooks',
             subCategories: [],
         },
         {
-            name: 'literature',
-            link: '/product/books/literature',
+            name: 'Literature',
+            link: '/product/category/books/Literature',
             subCategories: [
                 {
                     name: 'World literature',
-                    link: '/product/books/literature/world',
+                    link: '/product/category/books/literature/World literature',
                 },
                 {
                     name: 'Uzbek literature',
-                    link: '/product/books/literature/uzbek',
+                    link: '/product/category/books/literature/Uzbek literature',
                 },
                 {
                     name: 'Modern Uzbek literature',
-                    link: '/product/books/literature/modern-uzbek',
+                    link: '/product/category/books/literature/Modern Uzbek literature',
                 },
             ],
         },
@@ -107,15 +107,15 @@ const CATEGORY_DETAILS = {
     'Mobile and gadgets': [
         {
             name: 'Mobiles',
-            link: '/product/mobile-gadgets/mobiles',
+            link: '/product/category/mobile-gadgets/Mobiles',
             subCategories: [
                 {
-                    name: 'smartphones',
-                    link: '/product/mobile-gadgets/mobiles/smartphones',
+                    name: 'Smartphones',
+                    link: '/product/category/mobile-gadgets/mobiles/Smartphones',
                 },
                 {
-                    name: 'radiophones',
-                    link: '/product/mobile-gadgets/mobiles/radiophones',
+                    name: 'Radiophones',
+                    link: '/product/category/mobile-gadgets/mobiles/Radiophones',
                 },
             ],
         },
