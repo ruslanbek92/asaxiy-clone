@@ -21,7 +21,7 @@ function Products() {
                 {data.map((category) => {
                     return (
                         <li key={category.name}>
-                            <Link to={`/product/${category.name}`}>
+                            <Link to={`/product/category/${category.name}`}>
                                 <h2 className="font-bold">{category.name}</h2>
                             </Link>
                             <Category
