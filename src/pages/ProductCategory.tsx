@@ -11,7 +11,6 @@ function ProductCategory() {
     async function getDocument() {
         const docRef = doc(firestore, 'products', productCategory);
         const document = await getDoc(docRef);
-        // console.log("get doc data",document.data());
         return document.data();
     }
     const { data, isPending, isError, error } = useQuery({
@@ -26,11 +25,9 @@ function ProductCategory() {
         content = <p>Error: {error.message}</p>;
     }
     if (data) {
-        // console.log("data", data)
         content = (
             <ul className="flex flex-wrap justify-between gap-y-6">
                 {data.items.map((item) => {
-                    // console.log("item", item)
                     return (
                         <li key={item.title} className="w-[23%] h-48">
                             <Link to={`/product/detail/${item.title}`}>
