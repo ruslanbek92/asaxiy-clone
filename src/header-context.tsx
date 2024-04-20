@@ -20,7 +20,6 @@ export function HeaderContextProvider({ children }) {
                 const isNotAdded = !favoriteItems.find(
                     (element) => element.title === item.title
                 );
-                console.log('isNotAdded', isNotAdded);
                 if (isNotAdded) {
                     setFavoriteItems((prevItems) => [...prevItems, item]);
 
