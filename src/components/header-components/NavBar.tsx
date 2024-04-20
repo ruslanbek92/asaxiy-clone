@@ -7,7 +7,6 @@ import { HeaderContext } from '../../header-context';
 
 function NavBar() {
     const { favorites } = useContext(HeaderContext);
-    console.log('FAVS', favorites);
     return (
         <nav className="hidden xl:block">
             <ul className="flex gap-6">

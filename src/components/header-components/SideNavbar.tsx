@@ -4,7 +4,7 @@ import { HeaderContext } from '../../header-context';
 import Hamburger from './Hamburger';
 
 function SideNavbar() {
-    const { hamburger } = useContext(HeaderContext);
+    const { hamburger, favorites } = useContext(HeaderContext);
     const positionClass = !hamburger.isHamburgerOpen ? '-left-72' : '';
     return (
         <nav
@@ -21,7 +21,12 @@ function SideNavbar() {
                     <Link to="/">Tracking</Link>
                 </li>
                 <li className="text-center">
-                    <Link to="/">Favorites</Link>
+                    <Link to="/">
+                        Favorites:{' '}
+                        <span className="bg-orange-400 rounded-3xl px-2 text-white">
+                            {favorites.items.length}
+                        </span>
+                    </Link>
                 </li>
                 <li className="text-center">
                     <Link to="/">Login</Link>
