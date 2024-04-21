@@ -1,6 +1,5 @@
 import { useParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
-
 import { collection, getDocs } from 'firebase/firestore';
 import { firestore } from '../../firebase';
 import ProductTopInfo from './ProductTopInfo';

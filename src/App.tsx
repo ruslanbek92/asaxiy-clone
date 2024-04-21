@@ -9,6 +9,10 @@ import ProductCategory from './pages/ProductCategory';
 import addCategories, { addCategoryDetails } from './util/category';
 import addProducts from './util/products';
 import ProductDetail from './components/product-components/ProductDetail';
+import { CompareProducts } from './pages/CompareProducts';
+import { OrderPay } from './pages/OrderPay';
+import { OrderTrack } from './pages/OrderTrack';
+import { Favorites } from './pages/Favorites';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +20,10 @@ const router = createBrowserRouter([
         element: <RootLayout />,
         children: [
             { path: '/', element: <FixedProducts /> },
+            { path: '/compare', element: <CompareProducts /> },
+            { path: '/favorites', element: <Favorites /> },
+            { path: '/order-pay', element: <OrderPay /> },
+            { path: '/order-status', element: <OrderTrack /> },
             { path: '/product', element: <Products /> },
             {
                 path: '/product/category/:productCategory',
