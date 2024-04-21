@@ -12,7 +12,7 @@ function NavBar() {
             <ul className="flex gap-6">
                 <li>
                     <Link
-                        to="/"
+                        to="/compare"
                         className="flex flex-col items-center hover:text-sky-400"
                     >
                         <FaBalanceScale className="w-6 h-auto " /> Comparison
@@ -20,7 +20,7 @@ function NavBar() {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/order-pay"
                         className="flex flex-col items-center hover:text-sky-400"
                     >
                         <BiWallet className="w-6 h-auto" /> Payment
@@ -28,7 +28,7 @@ function NavBar() {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/order-status"
                         className="flex flex-col items-center hover:text-sky-400"
                     >
                         <RiTruckLine className="w-6 h-auto" /> Tracking
@@ -36,7 +36,7 @@ function NavBar() {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/favorites"
                         className="flex flex-col items-center hover:text-sky-400 position: relative"
                     >
                         <FaRegHeart className="w-6 h-auto" /> Favorites{' '}
