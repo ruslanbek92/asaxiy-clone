@@ -1,18 +1,18 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import RootLayout from './pages/Root';
 import FixedProducts from './pages/FixedProducts';
 import { HeaderContextProvider } from './header-context';
 import Products from './pages/Products';
 import ProductCategory from './pages/ProductCategory';
-import addCategories, { addCategoryDetails } from './util/category';
-import addProducts from './util/products';
+// import addCategories, { addCategoryDetails } from './util/category';
+// import addProducts from './util/products';
 import ProductDetail from './components/product-components/ProductDetail';
-import { CompareProducts } from './pages/CompareProducts';
-import { OrderPay } from './pages/OrderPay';
-import { OrderTrack } from './pages/OrderTrack';
-import { Favorites } from './pages/Favorites';
+import CompareProducts from './pages/CompareProducts';
+import OrderPay from './pages/OrderPay';
+import OrderTrack from './pages/OrderTrack';
+import Favorites from './pages/Favorites';
 
 const router = createBrowserRouter([
     {
@@ -45,11 +45,11 @@ const router = createBrowserRouter([
     },
 ]);
 function App() {
-    useEffect(() => {
-        addCategories();
-        addCategoryDetails();
-        addProducts();
-    }, []);
+    // useEffect(() => {
+    //     addCategories();
+    //     addCategoryDetails();
+    //     addProducts();
+    // }, []);
 
     const queryClient = new QueryClient();
     return (
