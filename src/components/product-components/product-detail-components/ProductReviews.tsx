@@ -70,13 +70,15 @@ function ProductReviews({ reviews, item }) {
                     })}
                 </div>
                 <form action="">
-                    {/* <label htmlFor="comment">Comment</label> */}
-                    <textarea
-                        name=""
-                        id="comment"
-                        required
-                        className="block w-full border border-gray-400 resize-none"
-                    />
+                    <label htmlFor="comment">
+                        Comment
+                        <textarea
+                            name=""
+                            id="comment"
+                            required
+                            className="block w-full border border-gray-400 resize-none"
+                        />
+                    </label>
                     <label htmlFor="img1">
                         <input type="file" name="" id="img1" />
                     </label>
