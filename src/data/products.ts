@@ -4,22 +4,7 @@ const products = {
             title: 'Boook A',
             author: 'Author A',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -58,22 +43,7 @@ GPS и ГЛОНАС
             title: 'Boook B',
             author: 'Author B',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -112,22 +82,7 @@ GPS и ГЛОНАС
             title: 'Boook C',
             author: 'Author C',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -166,22 +121,7 @@ GPS и ГЛОНАС
             title: 'Boook D',
             author: 'Author D',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -220,22 +160,7 @@ GPS и ГЛОНАС
             title: 'Boook E',
             author: 'Author E',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -274,22 +199,7 @@ GPS и ГЛОНАС
             title: 'Boook F',
             author: 'Author F',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -328,22 +238,7 @@ GPS и ГЛОНАС
             title: 'Boook F',
             author: 'Author F',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -382,22 +277,7 @@ GPS и ГЛОНАС
             title: 'Boook G',
             author: 'Author G',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -436,22 +316,7 @@ GPS и ГЛОНАС
             title: 'Boook H',
             author: 'Author H',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -490,22 +355,7 @@ GPS и ГЛОНАС
             title: 'Boook I',
             author: 'Author I',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -544,22 +394,7 @@ GPS и ГЛОНАС
             title: 'Boook J',
             author: 'Author J',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -598,22 +433,7 @@ GPS и ГЛОНАС
             title: 'Boook K',
             author: 'Author K',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -652,22 +472,7 @@ GPS и ГЛОНАС
             title: 'Boook L',
             author: 'Author L',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -706,22 +511,7 @@ GPS и ГЛОНАС
             title: 'Boook M',
             author: 'Author M',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -760,22 +550,7 @@ GPS и ГЛОНАС
             title: 'Boook N',
             author: 'Author N',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -814,22 +589,7 @@ GPS и ГЛОНАС
             title: 'Boook O',
             author: 'Author O',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -868,22 +628,7 @@ GPS и ГЛОНАС
             title: 'Boook P',
             author: 'Author P',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -922,22 +667,7 @@ GPS и ГЛОНАС
             title: 'Boook Q',
             author: 'Author Q',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -976,22 +706,7 @@ GPS и ГЛОНАС
             title: 'Boook R',
             author: 'Author R',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1030,22 +745,7 @@ GPS и ГЛОНАС
             title: 'Boook S',
             author: 'Author S',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1084,22 +784,7 @@ GPS и ГЛОНАС
             title: 'Boook T',
             author: 'Author T',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1138,22 +823,7 @@ GPS и ГЛОНАС
             title: 'Boook U',
             author: 'Author U',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1192,22 +862,7 @@ GPS и ГЛОНАС
             title: 'Boook V',
             author: 'Author V',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1246,22 +901,7 @@ GPS и ГЛОНАС
             title: 'Boook W',
             author: 'Author W',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1300,22 +940,7 @@ GPS и ГЛОНАС
             title: 'Boook X',
             author: 'Author X',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1354,22 +979,7 @@ GPS и ГЛОНАС
             title: 'Boook Y',
             author: 'Author Y',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1408,22 +1018,7 @@ GPS и ГЛОНАС
             title: 'Boook Z',
             author: 'Author Z',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'books',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1464,22 +1059,7 @@ GPS и ГЛОНАС
             title: 'Gadget A',
             producer: 'Producer A',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'Mobile and gadgets',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1518,22 +1098,7 @@ GPS и ГЛОНАС
             title: 'Gadget B',
             producer: 'Producer B',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'Mobile and gadgets',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1575,22 +1140,7 @@ GPS и ГЛОНАС
             title: 'Gadget C',
             producer: 'Producer C',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'Mobile and gadgets',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1631,22 +1181,7 @@ GPS и ГЛОНАС
             title: 'Appliances A',
             producer: 'Producer A',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'Household appliances',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1688,22 +1223,7 @@ GPS и ГЛОНАС
             title: 'Appliances B',
             producer: 'Producer B',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'Household appliances',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
@@ -1745,22 +1265,7 @@ GPS и ГЛОНАС
             title: 'Appliances C',
             producer: 'Producer C',
             price: 0,
-            reviews: [
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-                {
-                    author: 'Review Author',
-                    review: 'Great product!',
-                    rating: 5,
-                    date: '27-05-2024',
-                    replies: [{ author: 'Reply Author', reply: 'Reply text' }],
-                },
-            ],
+            category: 'Household appliances',
             description: `Описание товара
 Фитнес-браслет Xiaomi Band 8 Pro (Азия версия)
 Новый фитнес-браслет Xiaomi который сочетает в себе стильный дизайн, передовые технологии и широкий набор функций для улучшения вашего фитнес-опыта и поддержания здорового образа жизни. Гармония изысканного дизайна и передовых технологий, сотканная в уникальном симбиозе для достижения высших пиков в управлении вашим здоровьем и физической формой.
