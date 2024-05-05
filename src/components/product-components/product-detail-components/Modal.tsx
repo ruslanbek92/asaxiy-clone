@@ -1,53 +1,15 @@
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
 import { FaStar } from 'react-icons/fa6';
-import {
-    getDownloadURL,
-    ref as getRef,
-    uploadBytesResumable,
-} from 'firebase/storage';
-
 import { useMutation } from '@tanstack/react-query';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
-import { firestore, storage } from '../../../firebase';
 import queryClient from '../../../util/query';
 import ImagePicker from './ImagePicker';
+import { addReview } from '../../../util/reviews';
 
 const Modal = forwardRef(({ item }, ref) => {
     const [ratingStars, setRatingStars] = useState(5);
     const [isTextValid, setIsTextValid] = useState(true);
     const textarea = useRef();
     const dialog = useRef();
-    async function saveImages(images) {
-        const downloadUrls = [];
-        // eslint-disable-next-line no-restricted-syntax
-        for (const element of images) {
-            const imagesRef = getRef(storage, `reviews/${element.name}`);
-            // eslint-disable-next-line no-await-in-loop
-            const snapshot = await uploadBytesResumable(imagesRef, element);
-            // eslint-disable-next-line no-await-in-loop
-            const url = await getDownloadURL(snapshot.ref);
-            downloadUrls.push(url);
-        }
-        return downloadUrls;
-    }
-    async function addReview({ title, formData, imageFiles }) {
-        const images = await saveImages(imageFiles);
-        const docRef = doc(firestore, 'reviews', title);
-        const document = await getDoc(docRef);
-        const currentReviewsSet = document.data().reviewSet || [];
-        const now = new Date();
-        const dateStr = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()} ${now.getHours()}:${now.getMinutes()}: ${now.getSeconds()}`;
-        const newReview = {
-            author: 'User',
-            date: dateStr,
-            rating: formData.rating,
-            review: formData.comment,
-            replies: [],
-            images,
-        };
-        const updatedReviewSet = [...currentReviewsSet, newReview];
-        await updateDoc(docRef, { reviewSet: updatedReviewSet });
-    }
     const { mutate, isPending, isError, error } = useMutation({
         mutationFn: addReview,
         onSuccess: () => {
