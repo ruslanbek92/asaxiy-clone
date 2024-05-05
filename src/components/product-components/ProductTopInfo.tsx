@@ -5,7 +5,7 @@ function ProductTopInfo({ item }) {
     return (
         <div className="flex flex-col items-center md:flex-row  border-1 border-transparent my-44 border-2 border-red-500">
             <SliderComponent item={item} />
-            <div className="p-4 w-full md:w-2/5 border-2 border-green-500 text-center md:text-left">
+            <div className="p-4 w-full md:w-2/5  text-center md:text-left">
                 <h3 className="font-bold">{item.title}</h3>
                 <p className="font-bold text-4xl text-orange-500">
                     {item.price} soums

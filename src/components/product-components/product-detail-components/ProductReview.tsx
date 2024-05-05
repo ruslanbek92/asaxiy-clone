@@ -27,6 +27,11 @@ function ProductReview({ review }) {
                     </div>
                 ))}
             </p>
+            <div className="flex w-full gap-2 my-5">
+                {review.images.map((url) => (
+                    <img className="w-3/12 h-auto" src={url} alt="" />
+                ))}
+            </div>
         </div>
     );
 }

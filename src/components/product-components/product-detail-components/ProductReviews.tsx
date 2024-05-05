@@ -1,34 +1,43 @@
-import { useRef, useState } from 'react';
-import { FaStar } from 'react-icons/fa6';
+import { useRef } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { collection, doc, getDoc } from 'firebase/firestore';
 import ProductReview from './ProductReview';
+import Modal from './Modal';
+import { firestore } from '../../../firebase';
 
-function ProductReviews({ reviews, item }) {
-    const [ratingStars, setRatingStars] = useState(5);
-    let rating = ratingStars;
-    const stars = [
-        <FaStar style={{ width: '50px', height: 'auto' }} />,
-        <FaStar style={{ width: '50px', height: 'auto' }} />,
-        <FaStar style={{ width: '50px', height: 'auto' }} />,
-        <FaStar style={{ width: '50px', height: 'auto' }} />,
-        <FaStar style={{ width: '50px', height: 'auto' }} />,
-    ];
-    const dialoRef = useRef();
-
+function ProductReviews({ item }) {
+    const dialogRef = useRef();
     function handleAddReview() {
-        dialoRef.current.showModal();
+        dialogRef.current.openDialog();
     }
-    function handleCloseClick() {
-        dialoRef.current.close();
+
+    async function getProductReview() {
+        console.log('getProductREview');
+        const categoryDetailCollectionRef = collection(firestore, 'reviews');
+        const docRef = doc(categoryDetailCollectionRef, item.title);
+        const productReview = await getDoc(docRef);
+        return productReview.data();
     }
-    function handleStarClick(index) {
-        setRatingStars(index);
+    const { data, isPending, isError, error } = useQuery({
+        queryKey: ['reviews'],
+        queryFn: getProductReview,
+    });
+    let content;
+    if (isPending) {
+        content = 'Loading reviews...';
+    }
+    if (isError) {
+        content = `Error in loading reviews${error.message}`;
+    }
+    if (data) {
+        content = data.reviewSet.map((review) => (
+            <ProductReview review={review} />
+        ));
     }
     return (
         <div className="p-4 bg-white rounded-2xl mt-11">
             <h3 className="font-bold text-5xl">Reviews</h3>
-            {reviews.map((review) => (
-                <ProductReview review={review} />
-            ))}
+            {content}
             <button
                 type="button"
                 className="block p-4 bg-orange-500 rounded m-auto mt-4 text-white"
@@ -36,72 +45,7 @@ function ProductReviews({ reviews, item }) {
             >
                 Leave a review
             </button>
-            <dialog ref={dialoRef} className="p-3">
-                <h3 className="font-bold text-2xl text-center">
-                    Leave a review about {item.title}{' '}
-                </h3>
-                <div className="flex justify-center gap-2">
-                    {stars.map((star, index) => {
-                        if (rating) {
-                            rating -= 1;
-                            return (
-                                <button
-                                    type="button"
-                                    onClick={() => handleStarClick(index + 1)}
-                                >
-                                    <FaStar
-                                        style={{
-                                            fill: 'orange',
-                                            width: '50px',
-                                            height: 'auto',
-                                        }}
-                                    />
-                                </button>
-                            );
-                        }
-                        return (
-                            <button
-                                type="button"
-                                onClick={() => handleStarClick(index + 1)}
-                            >
-                                {star}
-                            </button>
-                        );
-                    })}
-                </div>
-                <form action="">
-                    <label htmlFor="comment">
-                        Comment
-                        <textarea
-                            name=""
-                            id="comment"
-                            required
-                            className="block w-full border border-gray-400 resize-none"
-                        />
-                    </label>
-                    <label htmlFor="img1">
-                        <input type="file" name="" id="img1" />
-                    </label>
-                    <label htmlFor="img2">
-                        <input type="file" name="" id="img2" />
-                    </label>
-
-                    <label htmlFor="img3">
-                        <input type="file" name="" id="img3" />
-                    </label>
-                    <label htmlFor="img4">
-                        <input type="file" name="" id="img4" />
-                    </label>
-
-                    <label htmlFor="img5">
-                        <input type="file" name="" id="img5" />
-                    </label>
-                </form>
-
-                <button type="button" onClick={handleCloseClick}>
-                    close
-                </button>
-            </dialog>
+            <Modal item={item} ref={dialogRef} />
         </div>
     );
 }

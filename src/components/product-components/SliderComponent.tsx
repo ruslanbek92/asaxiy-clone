@@ -7,7 +7,7 @@ function SliderComponent({ item }) {
         setImageState(img);
     }
     return (
-        <div className="flex flex-col-reverse items-center md:flex-row gap-14 p-3 w-full md:w-2/5 border-2 border-blue-500 position: relative">
+        <div className="flex flex-col-reverse items-center md:flex-row gap-14 p-3 w-full md:w-2/5 position: relative bg-white rounded-2xl">
             <ProductIcons item={item} />
             <div className="w-3/12  md:w-1/12 flex flex-row items-center md:flex-col gap-6">
                 {item.images.map((image) => (
