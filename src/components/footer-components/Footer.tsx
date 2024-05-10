@@ -6,6 +6,7 @@ import { IoMailOpenOutline } from 'react-icons/io5';
 import { CiLocationOn, CiCreditCard1 } from 'react-icons/ci';
 
 function Footer() {
+    console.log('Footer');
     return (
         <footer>
             <section className="py-10 px-4 bg-sky-400 ">

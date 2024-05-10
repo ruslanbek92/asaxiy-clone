@@ -2,8 +2,9 @@ import { useRef } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { collection, doc, getDoc } from 'firebase/firestore';
 import ProductReview from './ProductReview';
-import Modal from './Modal';
+import Modal from '../../Modal';
 import { firestore } from '../../../firebase';
+import ReviewForm from './ReviewForm';
 
 function ProductReviews({ item }) {
     const dialogRef = useRef();
@@ -12,7 +13,6 @@ function ProductReviews({ item }) {
     }
 
     async function getProductReview() {
-        console.log('getProductREview');
         const categoryDetailCollectionRef = collection(firestore, 'reviews');
         const docRef = doc(categoryDetailCollectionRef, item.title);
         const productReview = await getDoc(docRef);
@@ -45,7 +45,9 @@ function ProductReviews({ item }) {
             >
                 Leave a review
             </button>
-            <Modal item={item} ref={dialogRef} />
+            <Modal ref={dialogRef}>
+                <ReviewForm item={item} />
+            </Modal>
         </div>
     );
 }

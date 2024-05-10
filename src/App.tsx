@@ -15,6 +15,7 @@ import Favorites from './pages/Favorites';
 import queryClient from './util/query';
 import ProductDetail from './components/product-components/ProductDetail';
 import addReviews from './util/reviews';
+import Profile from './pages/Profile';
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
                 element: <ProductCategory />,
             },
             {
+                path: '/profile/:userId',
+                element: <Profile />,
+            },
+            {
                 path: '/product/category/:productCategory/:productSubCategory',
                 element: <ProductCategory />,
             },
@@ -47,6 +52,7 @@ const router = createBrowserRouter([
     },
 ]);
 function App() {
+    console.log('App');
     useEffect(() => {
         addCategories();
         addCategoryDetails();
