@@ -1,9 +1,9 @@
 import { MdOutlineShoppingCart } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
-import { CgProfile } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
 import Search from './Search';
 import NavBar from './NavBar';
 import { HeaderContext } from '../../header-context';
@@ -11,9 +11,17 @@ import uzbek from '../../assets/flag-uzbek.svg.png';
 import logo from '../../assets/asaxiy-logo.svg';
 import Hamburger from './Hamburger';
 import SubHeader from './SubHeader';
+import { LoginBtn } from './LoginBtn';
+import { auth } from '../../firebase';
 
 function Header() {
+    console.log('Header');
     const { category } = useContext(HeaderContext);
+    const [user, setUser] = useState(null);
+    onAuthStateChanged(auth, (currentUser) => {
+        if (currentUser) setUser(currentUser);
+        else setUser(null);
+    });
     const handleCatClick = () => {
         category.setIsCatOpen((prev) => !prev);
     };
@@ -59,13 +67,15 @@ function Header() {
                     Ozbekcha
                 </button>
                 <Hamburger />
-                <button
-                    className=" flex-col items-center hidden xl:flex"
-                    type="button"
-                >
-                    <CgProfile className="w-6 h-auto" />
-                    Log in
-                </button>
+                <LoginBtn />
+                {user && (
+                    <Link
+                        className="p-2 border-2 text-white bg-sky-500 bg rounded-lg"
+                        to={`/profile/${user.uid}`}
+                    >
+                        Profile
+                    </Link>
+                )}
             </div>
             <SubHeader />
         </header>

@@ -1,15 +1,15 @@
-import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
-import { FaStar } from 'react-icons/fa6';
 import { useMutation } from '@tanstack/react-query';
+import { FaStar } from 'react-icons/fa6';
+import { useRef, useState } from 'react';
 import queryClient from '../../../util/query';
-import ImagePicker from './ImagePicker';
 import { addReview } from '../../../util/reviews';
+import ImagePicker from './ImagePicker';
 
-const Modal = forwardRef(({ item }, ref) => {
+function ReviewForm({ item }) {
     const [ratingStars, setRatingStars] = useState(5);
     const [isTextValid, setIsTextValid] = useState(true);
     const textarea = useRef();
-    const dialog = useRef();
+
     const { mutate, isPending, isError, error } = useMutation({
         mutationFn: addReview,
         onSuccess: () => {
@@ -27,16 +27,6 @@ const Modal = forwardRef(({ item }, ref) => {
         <FaStar style={{ width: '50px', height: 'auto' }} />,
         <FaStar style={{ width: '50px', height: 'auto' }} />,
     ];
-
-    useImperativeHandle(ref, () => ({
-        openDialog() {
-            dialog.current.showModal();
-        },
-    }));
-
-    function handleCloseClick() {
-        dialog.current.close();
-    }
     function handleStarClick(index) {
         setRatingStars(index);
     }
@@ -61,9 +51,8 @@ const Modal = forwardRef(({ item }, ref) => {
             e.target.reset();
         }
     }
-
     return (
-        <dialog ref={dialog} className="p-3 rounded-2xl w-6/12">
+        <div>
             <h3 className="font-bold text-2xl text-center mb-2">
                 Leave a review about {item.title}{' '}
             </h3>
@@ -135,15 +124,7 @@ const Modal = forwardRef(({ item }, ref) => {
                     {isPending ? 'Sending...' : 'Send'}
                 </button>
             </form>
-
-            <button
-                type="button"
-                onClick={handleCloseClick}
-                className="p-3 bg-red-500 text-white rounded-xl"
-            >
-                close
-            </button>
-        </dialog>
+        </div>
     );
-});
-export default Modal;
+}
+export default ReviewForm;
