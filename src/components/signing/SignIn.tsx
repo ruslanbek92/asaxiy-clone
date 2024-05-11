@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router';
-import { Input } from './Input';
+import Input from './Input';
 import SignBtn from './SignBtn';
 import { auth } from '../../firebase';
 
@@ -12,9 +12,9 @@ function SignIn() {
     const formRef = useRef();
     const navigate = useNavigate();
     const { mutate, isPending, isError, error } = useMutation({
-        mutationFn: async ({ authObj, inemail, inpassword }) => {
+        mutationFn: async ({ auth: authObj, inemail, inpassword }) => {
             await signInWithEmailAndPassword(authObj, inemail, inpassword);
-            navigate(`/profile/${auth.currentUser.uid}`);
+            navigate(`/profile/${authObj.currentUser.uid}`);
         },
         onSuccess: () => {
             alert('Succes');
@@ -58,25 +58,22 @@ function SignIn() {
                 noValidate
                 onSubmit={handleSubmit}
             >
-                <Input type="email" id="inemail" label="Your email" required />
-                {!isEmailValid && (
-                    <p className="text-red-500">
-                        {' '}
-                        email field empty or doesnt include @
-                    </p>
-                )}
+                <Input
+                    type="email"
+                    id="inemail"
+                    label="Your email"
+                    validityState={isEmailValid}
+                    errorTxt="email field empty or doesnt include @"
+                    required
+                />
                 <Input
                     type="password"
                     id="inpassword"
                     label="Your password"
+                    validityState={isPasswordValid}
+                    errorTxt="password field empty or too short"
                     required
                 />
-                {!isPasswordValid && (
-                    <p className="text-red-500">
-                        {' '}
-                        password field empty or too short
-                    </p>
-                )}
                 <SignBtn>Sign in</SignBtn>
             </form>
         </>

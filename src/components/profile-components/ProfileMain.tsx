@@ -1,10 +1,10 @@
-import { Address } from './Address';
+import Address from './Address';
 import Chat from './Chat';
 import Elyurt from './Elyurt';
 import Installments from './Installments';
 import Orders from './Orders';
-import { Personal } from './personal/Personal';
-import { Status } from './Status';
+import Personal from './personal/Personal';
+import Status from './Status';
 import Transactions from './Transactions';
 
 function ProfileMain({ link }) {

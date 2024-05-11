@@ -11,18 +11,20 @@ import uzbek from '../../assets/flag-uzbek.svg.png';
 import logo from '../../assets/asaxiy-logo.svg';
 import Hamburger from './Hamburger';
 import SubHeader from './SubHeader';
-import { LoginBtn } from './LoginBtn';
+import LoginBtn from './LoginBtn';
 import { auth } from '../../firebase';
 
 function Header() {
     console.log('Header');
     const { category } = useContext(HeaderContext);
+    console.log('category', category);
     const [user, setUser] = useState(null);
     onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) setUser(currentUser);
         else setUser(null);
     });
     const handleCatClick = () => {
+        console.log('Handle cat click');
         category.setIsCatOpen((prev) => !prev);
     };
     return (

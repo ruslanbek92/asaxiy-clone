@@ -2,9 +2,11 @@ import { useRef, useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router';
-import { Input } from './Input';
+import Input from './Input';
 import { auth } from '../../firebase';
 import SignBtn from './SignBtn';
+import checkFormValidity from '../../util/validity';
+import addUser from '../../util/user';
 
 function SignUp() {
     const [isPasswordValid, setIsPasswordValid] = useState(true);
@@ -14,7 +16,13 @@ function SignUp() {
     const formRef = useRef();
     const navigate = useNavigate();
     const { mutate, isPending, isError, error } = useMutation({
-        mutationFn: async ({ authObj, email, password, name, surname }) => {
+        mutationFn: async ({
+            auth: authObj,
+            email,
+            password,
+            name,
+            surname,
+        }) => {
             const { user } = await createUserWithEmailAndPassword(
                 authObj,
                 email,
@@ -34,30 +42,15 @@ function SignUp() {
         const { name, email, password, surname } = Object.fromEntries(
             fd.entries()
         );
-        function checkFormValidity() {
-            if (name === '') {
-                setIsNameValid(false);
-                return false;
+        const isFormValid = checkFormValidity(
+            { email, name, surname, password },
+            {
+                changeEmailValidity: setIsEmailValid,
+                changeNameValidity: setIsNameValid,
+                changePassValidity: setIsPasswordValid,
+                changeSurnameValidity: setIsSurnameValid,
             }
-            setIsNameValid(true);
-            if (surname === '') {
-                setIsSurnameValid(false);
-                return false;
-            }
-            setIsSurnameValid(true);
-            if (email === '' || !email.includes('@')) {
-                setIsEmailValid(false);
-                return false;
-            }
-            setIsEmailValid(true);
-            if (password === '' || !(password.length > 7)) {
-                setIsPasswordValid(false);
-                return false;
-            }
-            setIsPasswordValid(true);
-            return true;
-        }
-        const isFormValid = checkFormValidity();
+        );
         if (isFormValid) {
             mutate({ auth, email, password, name, surname });
         }
@@ -80,47 +73,37 @@ function SignUp() {
                     id="name"
                     label="Your name"
                     disabled={isPending}
+                    validityState={isNameValid}
+                    errorTxt="Fill the name field"
                     required
                 />
-                {!isNameValid && (
-                    <p className="text-red-500">Fill the name field</p>
-                )}
                 <Input
                     type="text"
                     id="surname"
                     label="Your surname"
                     disabled={isPending}
+                    validityState={isSurnameValid}
+                    errorTxt="Fill the surname field"
                     required
                 />
-                {!isSurnameValid && (
-                    <p className="text-red-500">Fill the surname field</p>
-                )}
                 <Input
                     type="email"
                     id="email"
                     label="Your email"
                     disabled={isPending}
+                    validityState={isEmailValid}
+                    errorTxt="email field empty or doesnt include @"
                     required
                 />
-                {!isEmailValid && (
-                    <p className="text-red-500">
-                        {' '}
-                        email field empty or doesnt include @
-                    </p>
-                )}
                 <Input
                     type="password"
                     id="password"
                     label="Your password"
                     disabled={isPending}
+                    validityState={isPasswordValid}
+                    errorTxt="password field empty or too short"
                     required
                 />
-                {!isPasswordValid && (
-                    <p className="text-red-500">
-                        {' '}
-                        password field empty or too short
-                    </p>
-                )}
                 <SignBtn disabled={isPending}>
                     {isPending ? 'signing up' : 'Sign up'}
                 </SignBtn>
