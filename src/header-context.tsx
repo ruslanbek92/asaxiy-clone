@@ -33,7 +33,7 @@ export function HeaderContextProvider({ children }) {
     };
 
     return (
-        <HeaderContext.Provider value={useMemo(() => ctxValue, [])}>
+        <HeaderContext.Provider value={useMemo(() => ctxValue, [ctxValue])}>
             {children}
         </HeaderContext.Provider>
     );
