@@ -3,7 +3,7 @@ import { CgProfile } from 'react-icons/cg';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import Modal from '../Modal';
 import { auth } from '../../firebase';
-import { InOut } from '../signing/InOut';
+import InOut from '../signing/InOut';
 
 function LoginBtn() {
     const [user, setUser] = useState(null);

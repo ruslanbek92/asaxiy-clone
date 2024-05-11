@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import { PersonalProper } from './PersonalProper';
-import { PersonalEdit } from './PersonalEdit';
+import { useParams } from 'react-router';
+import PersonalProper from './PersonalProper';
+import PersonalEdit from './PersonalEdit';
 
 const Personal = () => {
+    const { userId } = useParams();
+
     const [mode, setMode] = useState('edited');
 
     let content = '';
     if (mode === 'edited') {
-        content = <PersonalProper onModeChange={setMode} />;
+        content = <PersonalProper onModeChange={setMode} id={userId} />;
     } else {
-        content = <PersonalEdit />;
+        content = <PersonalEdit id={userId} onModeChange={setMode} />;
     }
 
     return content;

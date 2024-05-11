@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ProfileMain } from './ProfileMain';
-import { ProfileSide } from './ProfileSide';
+import ProfileMain from './ProfileMain';
+import ProfileSide from './ProfileSide';
 
 function ProfileComponent({ id }) {
     const [link, setLink] = useState('personal');
