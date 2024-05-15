@@ -8,6 +8,7 @@ import Categories from '../components/categories-btn-components/Categories';
 import MainSection from '../components/MainSection';
 
 function RootLayout() {
+    console.log('RootLayout');
     const { category } = useContext(HeaderContext);
 
     return (

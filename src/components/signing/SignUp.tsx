@@ -7,6 +7,7 @@ import { auth } from '../../firebase';
 import SignBtn from './SignBtn';
 import checkFormValidity from '../../util/validity';
 import addUser from '../../util/user';
+import addUserCart from '../../util/cart';
 
 function SignUp() {
     const [isPasswordValid, setIsPasswordValid] = useState(true);
@@ -29,6 +30,7 @@ function SignUp() {
                 password
             );
             await addUser(user.uid, name, surname, email);
+            await addUserCart(user.uid);
             navigate(`/profile/${user.uid}`);
         },
         onSuccess: () => {

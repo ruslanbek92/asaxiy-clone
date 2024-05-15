@@ -1,4 +1,5 @@
 function Search() {
+    console.log('Search');
     return (
         <form className=" border-2 rounded border-sky-400 w-80">
             <input

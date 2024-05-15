@@ -5,6 +5,7 @@ import CategoriesSideBar from './CategoriesSideBar';
 import { getCategoryDetails } from '../../util/category';
 
 function Categories() {
+    console.log('Categories');
     const [content, setContent] = useState('books');
     const handleMouseEnter = (title) => {
         setContent(title);

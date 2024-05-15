@@ -3,6 +3,7 @@ import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
 import { HeaderContext } from '../../header-context';
 
 function ProductIcons({ item }) {
+    console.log('HeaderContextProvider');
     const { favorites } = useContext(HeaderContext);
     const isFavorite = !!favorites.items.find(
         (element) => element.title === item.title

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 function SubHeader() {
+    console.log('Subheader');
     return (
         <nav className="border-y-2 border-solid  bg-white">
             <ul className="flex flex-col gap-2 md:flex-row md:gap-0 justify-between items-center p-5 font-bold">

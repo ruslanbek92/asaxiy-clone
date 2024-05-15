@@ -1,31 +1,33 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CgProfile } from 'react-icons/cg';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import Modal from '../Modal';
+import { useNavigate } from 'react-router';
 import { auth } from '../../firebase';
-import InOut from '../signing/InOut';
 
 function LoginBtn() {
     const [user, setUser] = useState(null);
     const dialogRef = useRef();
+    const navigate = useNavigate();
+    useEffect(() => {
+        onAuthStateChanged(auth, async (currentUser) => {
+            if (currentUser) {
+                setUser(currentUser);
+                dialogRef.current.closeDialog();
+            }
 
-    onAuthStateChanged(auth, async (currentUser) => {
-        if (currentUser) {
-            setUser(currentUser);
-            dialogRef.current.closeDialog();
-        }
-
-        if (!currentUser) {
-            setUser(null);
-        }
-    });
+            if (!currentUser) {
+                setUser(null);
+            }
+        });
+    }, []);
     function handleClick() {
-        dialogRef.current.openDialog();
+        if (user) {
+            signOut(auth);
+            return;
+        }
+        navigate('/registration');
     }
 
-    async function handleLogout() {
-        await signOut(auth);
-    }
     return (
         <>
             <button
@@ -37,7 +39,7 @@ function LoginBtn() {
                 {user && 'Log out'}
                 {!user && 'Log in'}
             </button>
-            <Modal ref={dialogRef}>
+            {/* <Modal ref={dialogRef}>
                 {!user && <InOut />}
                 {user && (
                     <div className="flex flex-col items-center">
@@ -50,7 +52,7 @@ function LoginBtn() {
                         </button>
                     </div>
                 )}
-            </Modal>
+            </Modal> */}
         </>
     );
 }

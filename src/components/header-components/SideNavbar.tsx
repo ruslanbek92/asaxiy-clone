@@ -4,6 +4,7 @@ import { HeaderContext } from '../../header-context';
 import Hamburger from './Hamburger';
 
 function SideNavbar() {
+    console.log('Sidenavbar');
     const { hamburger, favorites } = useContext(HeaderContext);
     const positionClass = !hamburger.isHamburgerOpen ? '-left-72' : '';
     return (

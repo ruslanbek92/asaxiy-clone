@@ -4,10 +4,9 @@ import { IoClose } from 'react-icons/io5';
 import { HeaderContext } from '../../header-context';
 
 function Hamburger() {
+    console.log('Hamburger');
     const { hamburger } = useContext(HeaderContext);
-    console.log('hamburger', hamburger.isHamburgerOpen);
     const handleMenuClick = () => {
-        console.log('hamburger click');
         hamburger.setIsHamburgerOpen((prev) => !prev);
     };
     return (
