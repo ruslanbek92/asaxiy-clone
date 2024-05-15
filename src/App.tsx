@@ -6,16 +6,15 @@ import FixedProducts from './pages/FixedProducts';
 import { HeaderContextProvider } from './header-context';
 import Products from './pages/Products';
 import ProductCategory from './pages/ProductCategory';
-import addCategories, { addCategoryDetails } from './util/category';
-import addProducts from './util/products';
 import CompareProducts from './pages/CompareProducts';
 import OrderPay from './pages/OrderPay';
 import OrderTrack from './pages/OrderTrack';
 import Favorites from './pages/Favorites';
 import queryClient from './util/query';
 import ProductDetail from './components/product-components/ProductDetail';
-import addReviews from './util/reviews';
 import Profile from './pages/Profile';
+import Registration from './pages/Registration';
+import { Cart } from './pages/Cart';
 
 const router = createBrowserRouter([
     {
@@ -28,6 +27,8 @@ const router = createBrowserRouter([
             { path: '/order-pay', element: <OrderPay /> },
             { path: '/order-status', element: <OrderTrack /> },
             { path: '/product', element: <Products /> },
+            { path: '/registration', element: <Registration /> },
+            { path: '/cart', element: <Cart /> },
             {
                 path: '/product/category/:productCategory',
                 element: <ProductCategory />,
@@ -54,10 +55,10 @@ const router = createBrowserRouter([
 function App() {
     console.log('App');
     useEffect(() => {
-        addCategories();
-        addCategoryDetails();
-        addProducts();
-        addReviews();
+        // addCategories();
+        // addCategoryDetails();
+        // addProducts();
+        // addReviews();
     }, []);
 
     return (

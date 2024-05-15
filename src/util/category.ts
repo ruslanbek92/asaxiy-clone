@@ -22,6 +22,7 @@ export default function addCategories() {
         );
         const querySnapshot = await getDocs(categoryQuery);
         if (!querySnapshot.empty) {
+            console.log('empty');
             return;
         }
         const iconUrl = await getDownloadURL(ref(storage, category.icon));

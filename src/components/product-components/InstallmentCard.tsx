@@ -9,7 +9,7 @@ function InstallmentCard({ price }) {
         setPeriod(changedPeriod);
     }
     return (
-        <div className="p-3 w-full md:w-1/5 border-2 border-yellow-400 flex flex-col gap-3 bg-white rounded-xl">
+        <div className="p-3 w-full md:w-1/5 border-2 border-yellow-400 flex flex-col self-start gap-3 bg-white rounded-xl">
             <h3 className="font-bold">Installemts of Payment</h3>
             <div className="flex justify-center gap-1 md:justify-between">
                 <button

@@ -5,6 +5,7 @@ import { auth } from '../firebase';
 import ProfileComponent from '../components/profile-components/ProfileComponent';
 
 const Profile = () => {
+    console.log('Profile');
     const [isLogged, setIsLogged] = useState();
     const params = useParams();
     onAuthStateChanged(auth, (currentUser) => {

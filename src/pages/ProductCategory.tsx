@@ -7,6 +7,7 @@ import { firestore } from '../firebase';
 import ProductCard from '../components/product-components/ProductCard';
 
 function ProductCategory() {
+    console.log('ProductCategory');
     const { productCategory } = useParams();
     async function getDocument() {
         const docRef = doc(firestore, 'products', productCategory);

@@ -2,7 +2,7 @@ import { MdOutlineShoppingCart } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import Search from './Search';
 import NavBar from './NavBar';
@@ -17,14 +17,15 @@ import { auth } from '../../firebase';
 function Header() {
     console.log('Header');
     const { category } = useContext(HeaderContext);
-    console.log('category', category);
     const [user, setUser] = useState(null);
-    onAuthStateChanged(auth, (currentUser) => {
-        if (currentUser) setUser(currentUser);
-        else setUser(null);
-    });
+    useEffect(() => {
+        onAuthStateChanged(auth, (currentUser) => {
+            if (currentUser) {
+                setUser(currentUser);
+            } else setUser(null);
+        });
+    }, []);
     const handleCatClick = () => {
-        console.log('Handle cat click');
         category.setIsCatOpen((prev) => !prev);
     };
     return (
@@ -54,7 +55,8 @@ function Header() {
                 </button>
                 <Search />
                 <NavBar />
-                <button
+                <Link
+                    to="/cart"
                     className="position: relative flex flex-col hover:text-sky-400"
                     type="button"
                 >
@@ -63,7 +65,7 @@ function Header() {
                     <span className="text-white position: absolute left-4 w-6 h-6 flex justify-center items-center bg-sky-400 rounded-full">
                         {1}
                     </span>
-                </button>
+                </Link>
                 <button className="flex flex-col items-center " type="button">
                     <img src={uzbek} alt="" className="w-6 h-6 rounded-full" />
                     Ozbekcha

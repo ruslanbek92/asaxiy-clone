@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { HeaderContext } from '../../header-context';
 
 function NavBar() {
+    console.log('Navbar');
     const { favorites } = useContext(HeaderContext);
     return (
         <nav className="hidden xl:block">

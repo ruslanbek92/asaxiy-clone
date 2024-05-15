@@ -1,3 +1,5 @@
+import InOut from '../components/signing/InOut';
+
 export default function Registration() {
-    return <div>Registration</div>;
+    return <InOut />;
 }

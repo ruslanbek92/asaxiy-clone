@@ -4,6 +4,7 @@ import Category from '../components/Category';
 import { getCategories } from '../util/category';
 
 function Products() {
+    console.log('Products');
     const { data, isPending, isError, error } = useQuery({
         queryKey: ['categories'],
         queryFn: getCategories,
