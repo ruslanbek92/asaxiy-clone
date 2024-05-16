@@ -1,19 +1,8 @@
-import { useMutation } from '@tanstack/react-query';
 import ProductIcons from './ProductIcons';
-import { addProductToCart } from '../../util/cart';
-import { auth } from '../../firebase';
+import useAddToCart from '../../hooks/useAddToCart';
 
 function ProductCard({ item }) {
-    const { mutate, isPending, isError, error } = useMutation({
-        mutationFn: ({ productItem }) =>
-            addProductToCart(productItem, auth.currentUser.uid),
-        onSuccess: () => {
-            alert('added');
-        },
-    });
-    async function handleAddToCart() {
-        mutate({ item: productItem });
-    }
+    const { isPending, isError, error, handleAddToCart } = useAddToCart(item);
     return (
         <div className="flex flex-col gap-3  bg-white p-2 rounded-3xl overflow-hidden position: relative">
             <ProductIcons item={item} />

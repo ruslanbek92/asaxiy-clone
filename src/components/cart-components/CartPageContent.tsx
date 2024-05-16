@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { CartProductCard } from './CartProductCard';
-import { CartAside } from './CartAside';
+import CartProductCard from './CartProductCard';
+import CartAside from './CartAside';
 import InstallmentCard from '../product-components/InstallmentCard';
 
 function CartPageContent({ products }) {

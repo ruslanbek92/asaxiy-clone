@@ -14,7 +14,7 @@ import queryClient from './util/query';
 import ProductDetail from './components/product-components/ProductDetail';
 import Profile from './pages/Profile';
 import Registration from './pages/Registration';
-import { Cart } from './pages/Cart';
+import Cart from './pages/Cart';
 
 const router = createBrowserRouter([
     {
