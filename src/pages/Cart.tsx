@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { auth } from '../firebase';
 import { getCart } from '../util/cart';
-import { CartPageContent } from '../components/cart-components/CartPageContent';
+import CartPageContent from '../components/cart-components/CartPageContent';
 
 function Cart() {
     console.log('Cart');
