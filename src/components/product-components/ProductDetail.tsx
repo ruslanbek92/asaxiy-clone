@@ -1,13 +1,7 @@
-// import { Navigate, redirect, useParams } from 'react-router';
-import { useQuery } from '@tanstack/react-query';
 import { collection, getDocs } from 'firebase/firestore';
 import { useParams } from 'react-router';
 import { firestore } from '../../firebase';
-import ProductTopInfo from './ProductTopInfo';
-
-import ProductDescription from './product-detail-components/ProductDescription';
-import Characteristics from './product-detail-components/Characteristics';
-import ProductReviews from './product-detail-components/ProductReviews';
+import useReactQuery from '../../hooks/useReactQuery';
 
 function ProductDetail() {
     const { productDetail } = useParams();
@@ -29,27 +23,13 @@ function ProductDetail() {
         }
         return productItem;
     }
-    const { data, isPending, isError, error } = useQuery({
-        queryKey: [productDetail],
-        queryFn: getProductItem,
-    });
-    let content;
-    if (isPending) {
-        content = <p>Loading...</p>;
-    }
-    if (isError) {
-        content = <p>Error: {error.message}</p>;
-    }
-    if (data) {
-        content = (
-            <>
-                <ProductTopInfo item={data} />
-                <ProductDescription description={data.description} />
-                <Characteristics characteristics={data.characteristics} />
-                <ProductReviews item={data} />
-            </>
-        );
-    }
+    const content = useReactQuery(
+        {
+            queryKey: [productDetail],
+            queryFn: getProductItem,
+        },
+        'getProductItem'
+    );
 
     return <div>{content}</div>;
 }
