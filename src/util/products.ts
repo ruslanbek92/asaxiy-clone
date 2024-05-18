@@ -31,3 +31,8 @@ export default async function addProducts() {
         await setDoc(docRef, prods);
     }
 }
+export async function getDocument(productCategory) {
+    const docRef = doc(firestore, 'products', productCategory);
+    const document = await getDoc(docRef);
+    return document.data();
+}

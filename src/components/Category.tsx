@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 import { useQuery } from '@tanstack/react-query';
 import { getCategoryDetails } from '../util/category';
 

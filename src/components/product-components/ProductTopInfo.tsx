@@ -36,7 +36,7 @@ function ProductTopInfo({ item }) {
                     </button>
                 </div>
             </div>
-            <InstallmentCard price={12567435} />
+            <InstallmentCard price={item.price} />
         </div>
     );
 }
